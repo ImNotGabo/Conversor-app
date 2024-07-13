@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Conversor.Views.Conversion"
+             NavigationPage.HasNavigationBar="False">
+    <Grid BackgroundColor="#FDE07E">
+        <StackLayout Margin="20"
+                     VerticalOptions="Center"
+                     Spacing="20">
+            <Image Source="earth.png"/>
+            <Frame HasShadow="False"
+                   CornerRadius="15">
+                <Entry Keyboard="Numeric" 
+                       Placeholder="centimeters (cm)"
+                       FontSize="Medium"
+                       x:Name="Txtcm"/>
+            </Frame>
+            
+            <Button Text="Calculate"
+                    FontAttributes="Bold"
+                    FontSize="12"
+                    CornerRadius="12"
+                    TextTransform="None"
+                    BackgroundColor="#7C50E9"
+                    TextColor="White"
+                    x:Name="BtnCalculate"
+                    Clicked="BtnCalculate_Clicked"/>
+            
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Results:" 
+                   FontSize="Medium" 
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"/>
+                <Label Text="0.00"
+                       FontSize="Medium"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" 
+                       x:Name="LabelResult" />
+            </StackLayout>
+            
+            <Button Text="Back"
+                    TextTransform="None"
+                    BackgroundColor="white"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    CornerRadius="12"
+                    x:Name="BtnBack"
+                    Clicked="BtnBack_Clicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
